@@ -1,8 +1,17 @@
 import selenium.webdriver
+import pickle
 
+#comment the line below this and add the selenium.webdriver.Firefox() i need to do this for geckodriver to work
 driver = selenium.webdriver.Firefox(executable_path='/Users/anonymous/Desktop/zoom-whatsapp-adhesive/geckodriver')
 driver.get("http://web.whatsapp.com")
-input()
+input("press enter")
+
+#comment this later when u have added cookies once
+pickle.dump( driver.get_cookies() , open("cookies.pkl","wb"))
+#comment above line
+cookies = pickle.load(open("cookies.pkl", "rb"))
+for cookie in cookies:
+    driver.add_cookie(cookie)
 
 elements = driver.find_elements_by_class_name("_22Msk")
 print(len(elements))
