@@ -1,9 +1,9 @@
-from funcs import *
+from importall import *
 
 #driver = start_browser()
 open_link('https://web.whatsapp.com')
 is_open_wait(True)
-
+goto_clas("11A Official 2021-22")
 while True:
     #input("class, and now scroll")
     time.sleep(1)
