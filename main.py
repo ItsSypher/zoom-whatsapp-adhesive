@@ -1,3 +1,15 @@
+try:
+    import selenium
+except ImportError as e:
+    print(f"{e}\n\n\n\n\n\n\n\n\n\n")
+    os.system("pip install selenium")
+
+try:
+    import chromedriver_autoinstaller
+except ImportError as e:
+    print(f"{e}\n\n\n\n\n\n\n\n\n\n")
+    os.system("pip install chromedriver-autoinstaller")
+
 from importall import *
 
 #driver = start_browser()

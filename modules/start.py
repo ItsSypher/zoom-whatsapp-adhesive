@@ -1,16 +1,18 @@
 import selenium.webdriver
 import time
+import chromedriver_autoinstaller
 
-
+"""
 def start_browser():
     options = selenium.webdriver.ChromeOptions()
     options.add_argument(r"user-data-dir=.chrome")
-    driver = selenium.webdriver.Chrome(executable_path=r'chromedriver', options=options)
+    driver = selenium.webdriver.Chrome(options=options)
     return driver
-
+"""
+chromedriver_autoinstaller.install()
 options = selenium.webdriver.ChromeOptions()
 options.add_argument(r"user-data-dir=.chrome")
-driver = selenium.webdriver.Chrome(executable_path=r'chromedriver', options=options)
+driver = selenium.webdriver.Chrome(options=options)
 
 def open_link(link,new_tab=False,switch_back=True):
     if new_tab:
