@@ -14,7 +14,11 @@ except ImportError as e:
 except:
     print("some dumb error occured")
 
+input("press enter to continue [1]")
+
 from importall import *
+
+input("press enter to continue [2]")
 
 #driver = start_browser()
 open_link('https://web.whatsapp.com')
