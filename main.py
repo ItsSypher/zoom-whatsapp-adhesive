@@ -3,12 +3,16 @@ try:
 except ImportError as e:
     print(f"{e}\n\n\n\n\n\n\n\n\n\n")
     os.system("pip install selenium")
+except:
+    print("some dumb error occured")
 
 try:
     import chromedriver_autoinstaller
 except ImportError as e:
     print(f"{e}\n\n\n\n\n\n\n\n\n\n")
     os.system("pip install chromedriver-autoinstaller")
+except:
+    print("some dumb error occured")
 
 from importall import *
 
