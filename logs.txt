@@ -1,3 +1,5 @@
 commit "epic autoinstaller"
     added auto detect and install driver acc to os and version of chrome
     added auto check and package install if not installed
+commit "added autoinstaller module"
+    added chromedriver_autoinstaller in modules

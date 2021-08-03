@@ -1,6 +1,6 @@
+from chromedriver_autoinstaller import install
 import selenium.webdriver
 import time
-import chromedriver_autoinstaller
 
 """
 def start_browser():
@@ -9,7 +9,7 @@ def start_browser():
     driver = selenium.webdriver.Chrome(options=options)
     return driver
 """
-chromedriver_autoinstaller.install()
+install()
 options = selenium.webdriver.ChromeOptions()
 options.add_argument(r"user-data-dir=.chrome")
 driver = selenium.webdriver.Chrome(options=options)

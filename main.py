@@ -6,19 +6,9 @@ except ImportError as e:
 except:
     print("some dumb error occured")
 
-try:
-    import chromedriver_autoinstaller
-except ImportError as e:
-    print(f"{e}\n\n\n\n\n\n\n\n\n\n")
-    os.system("pip install chromedriver-autoinstaller")
-except:
-    print("some dumb error occured")
-
-input("press enter to continue [1]")
-
 from importall import *
 
-input("press enter to continue [2]")
+input("press enter to continue [1]")
 
 #driver = start_browser()
 open_link('https://web.whatsapp.com')
