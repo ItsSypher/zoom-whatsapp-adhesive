@@ -1,4 +1,6 @@
 import os
+
+#unused func opens directly zoom link in linux not tested anywhere else
 def join_link(link):
     confno=pwd_hash=''
     

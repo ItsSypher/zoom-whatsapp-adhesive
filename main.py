@@ -1,14 +1,4 @@
-try:
-    import selenium
-except ImportError as e:
-    print(f"{e}\n\n\n\n\n\n\n\n\n\n")
-    os.system("pip install selenium")
-except:
-    print("some dumb error occured")
-
 from importall import *
-
-input("press enter to continue [1]")
 
 #driver = start_browser()
 open_link('https://web.whatsapp.com')

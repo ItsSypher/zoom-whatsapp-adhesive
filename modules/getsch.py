@@ -1,5 +1,6 @@
 #print(messages)
 
+#main algorithm of the data extraction returns feature dictionary of the individual msg pass
 def get_content(message):
     msg=message.split()
     #print(msg)
@@ -113,7 +114,7 @@ def get_content(message):
     #time=((11,20),2)
     
     
-    
+    # dict details
     info={"teacher": name,
           "has_name" : has_name,
          "time" : time,
@@ -135,25 +136,33 @@ def get_content(message):
                  "id" : get_id(message),
                  "pass" : get_pass(message)
                 }'''
+
+#calls get_content iteratively over all msgs and adds it to a list
 def update_info(messages):
     info=[]
     for message in messages:
         info.append(get_content(message))
     return info
-        
-def describe_info(messages):
-    extracted_info=update_info(messages)
-    for info in extracted_info:
+
+
+#describes the list of dicts getted from update info
+def describe_info(all_info):
+#    extracted_info=update_info(messages)
+    for info in all_info:
         if (info["has_name"] and info["has_time"] and info["has_link"]):
             for value in info:
                 print(value, ":", info[value])
             print("\n")    
-            
+
+#describes individual class by index            
 def describe_clas(msg_info, index):
     for value in msg_info[index]:
         print(value, ":", msg_info[index][value])
     print("\n")   
 
+
+
+#testing
 #driver.get("https://web.whatsapp.com")
 #input()
 #goto_clas("11A Official 2021-22")

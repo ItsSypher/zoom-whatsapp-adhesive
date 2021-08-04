@@ -1,6 +1,8 @@
 import time
 from datetime import date
 
+
+#returns time tuple(hour, minutes) and date
 def get_time():
     t = time.localtime()
     #print(type(t))
@@ -9,6 +11,8 @@ def get_time():
     today = date.today()
     return time_rn, int(today.strftime("%d"))
 
+
+#checks for if class rn by comparing class time and time right now
 times=times_raw={}
 def which_class_rn(info):
     is_clas_rn=False
