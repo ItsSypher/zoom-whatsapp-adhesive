@@ -4,7 +4,7 @@ import time
 import chromedriver_autoinstaller
 
 
-chromedriver_autoinstaller.install()
+chromedriver_autoinstaller.install(True)
 
 #unsused func to start browser problem:driver becomes local
 def start_browser():

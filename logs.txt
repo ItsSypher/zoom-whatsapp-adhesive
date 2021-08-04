@@ -5,3 +5,4 @@ commit "added autoinstaller module"
     added chromedriver_autoinstaller in moduleschromedriver_autoinstaller now a dependency
 modules improves and commented
 jupyter notebook removed
+maybe import modules in other to make function work?
