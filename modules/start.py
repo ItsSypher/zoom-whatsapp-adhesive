@@ -15,7 +15,7 @@ def start_browser():
 
 #this is used as global
 if platform.system() == 'Darwin' or platform.system() == 'Linux':
-    directory = (f"{os.getcwd()}/.chrome")
+    directory = (".chrome")
 elif platform.system() == 'Windows':
     directory = (f"{os.getcwd()}\\.chrome")
 print(directory)
