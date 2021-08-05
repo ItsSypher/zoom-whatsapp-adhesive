@@ -16,10 +16,9 @@ def get_content(message):
         i+=1
         if i >= len(msg):
             break
-        
-    #print("Name:", name)
-    
-    
+
+
+
     i=0
     time=''
     has_time=False
@@ -39,10 +38,9 @@ def get_content(message):
             if i >= len(msg):
                 break
     time_str=time
-    #print("time:", time)
-    
-    
-    
+
+
+
     i=0
     link=''
     has_link=False
@@ -51,16 +49,18 @@ def get_content(message):
         if (msg[i].startswith('https')):
             has_link=True
             link=msg[i]
-        i+=1    
-        
-    #print("link:", link)
-    
+        i+=1
+
+
+
     if(has_link and has_time and False):
         print("name:", name)
         print("time:", time)
         print("link:", link)
         print("\n")
-    
+
+
+
     mid=''
     passwd=''
     has_id=False
@@ -77,28 +77,24 @@ def get_content(message):
         i+=1
     if(i< len(msg)):
         passwd=msg[i+1]
-    
-    
+
+
+
     sent_time=(0,0)
-    sent_time_raw=msg[-2:]    
-    #print("sent time", sent_time_raw)
+    sent_time_raw=msg[-2:]
     hours = int(sent_time_raw[0].split(":")[0])  
     minutes = int(sent_time_raw[0].split(":")[1])
     
     if(sent_time_raw[1]=='PM' and hours != 12):
         sent_time= (hours+12,minutes) 
     else:
-        sent_time= (hours,minutes) 
-    #times_raw[index]=this_time_raw
-    #print("sent time", sent_time)
-    
-    
-    #print(index, clas["time"])
+        sent_time= (hours,minutes)
+
+
+
     if has_time:
         this_time_raw=time.split()[3:5]
-        #print("this_time_raw:", this_time_raw)
         date_clas=int(time.split()[1][:-1])
-        #print(date)
         hours = int(this_time_raw[0].split(":")[0])  
         minutes= int(this_time_raw[0].split(":")[1])
 
@@ -106,14 +102,12 @@ def get_content(message):
             this_time= (hours+12,minutes) 
         else:
             this_time= (hours,minutes) 
-            #times_raw[index]=this_time_raw
         time=(this_time,date_clas)
     else:
         time=((0,0),0) #time doesnt exist
-        
-    #time=((11,20),2)
-    
-    
+
+
+
     # dict details
     info={"teacher": name,
           "has_name" : has_name,
@@ -144,10 +138,8 @@ def update_info(messages):
         info.append(get_content(message))
     return info
 
-
-#describes the list of dicts getted from update info
+#unused describes the list of dicts getted from update info
 def describe_info(all_info):
-#    extracted_info=update_info(messages)
     for info in all_info:
         if (info["has_name"] and info["has_time"] and info["has_link"]):
             for value in info:
@@ -158,12 +150,4 @@ def describe_info(all_info):
 def describe_clas(msg_info, index):
     for value in msg_info[index]:
         print(value, ":", msg_info[index][value])
-    print("\n")   
-
-
-
-#testing
-#driver.get("https://web.whatsapp.com")
-#input()
-#goto_clas("11A Official 2021-22")
-#describe_info(get_messages())
+    print("\n")

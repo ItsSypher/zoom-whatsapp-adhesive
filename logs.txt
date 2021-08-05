@@ -3,6 +3,11 @@ commit "epic autoinstaller"
     added auto check and package install if not installed
 commit "added autoinstaller module"
     added chromedriver_autoinstaller in moduleschromedriver_autoinstaller now a dependency
-modules improves and commented
-jupyter notebook removed
-maybe import modules in other to make function work?
+commit retort
+    modules improves and commented
+    jupyter notebook removed
+    maybe import modules in other to make function work?
+commit "added notif"
+    added a notification module that determines the OS and notifies accordingly
+    made the code better to read in general
+    removed useless comments
