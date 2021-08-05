@@ -2,7 +2,9 @@ from modules.notif import notifer
 from importall import *
 
 open_link('https://web.whatsapp.com')
+input("enter to continue [1]")
 is_open_wait(True)
+input("enter to continue [2]")
 goto_clas("11A Official 2021-22")
 while True:
     time.sleep(1)
@@ -21,4 +23,4 @@ while True:
         time.sleep(1)
         driver.switch_to.window(driver.window_handles[0])
     print("looping ", get_time()[0] )
-    time.sleep(300)
+    time.sleep(120)
