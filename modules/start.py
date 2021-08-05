@@ -1,6 +1,7 @@
 import chromedriver_autoinstaller 
 import selenium.webdriver
 import time
+import os
 
 chromedriver_autoinstaller.install(True)
 
@@ -12,8 +13,9 @@ def start_browser():
     return driver
 
 #this is used as global
+directory = (f"{os.getcwd()}\.chrome")
 options = selenium.webdriver.ChromeOptions()
-options.add_argument(r"user-data-dir=.chrome")
+options.add_argument(r"{0}".format(directory))
 driver = selenium.webdriver.Chrome(options=options)
 
 #unused opens links yet to add support to switch and switch back

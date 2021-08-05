@@ -1,11 +1,11 @@
-from modules.notif import notifer
 from importall import *
 
 open_link('https://web.whatsapp.com')
-input("enter to continue [1]")
+print("opening whatsapp")
 is_open_wait(True)
-input("enter to continue [2]")
+print("successfully opened")
 goto_clas("11A Official 2021-22")
+print("was able to find group")
 while True:
     time.sleep(1)
     msg_raw=get_messages()
