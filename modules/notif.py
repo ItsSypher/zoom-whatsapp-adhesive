@@ -13,7 +13,7 @@ def notifer(msg_info, index):
 
     plt = platform.system()
 
-    if plt == 'Linux':
+    if plt == 'Darwin':
         command = f'''osascript -e 'display notification "{message}" with title "{title}"'
         '''
         try:
@@ -22,7 +22,7 @@ def notifer(msg_info, index):
             print("cannot notify")
             pass
     
-    elif plt == 'Darwin':
+    elif plt == 'Linux':
         command = f'''notify-send "{title}" "{message}"
 		'''
         try:
